@@ -169,7 +169,7 @@ def dicionario_id_estadio_e_nro_jogos(dados):
 13. A próxima função recebe apenas o dicionário dos dados do brasileirão
 
 Ela retorna o número de times que o brasileirão qualifica para a libertadores.
-Ou seja, devolve quantos times são classificados para a libertadores (consultando
+Ou seja, devolve quantos times são classificados para a libertadores (consultando)
 o dicionário de faixas).
 
 Note que esse número está nos dados recebidos no parâmetro e você deve pegar esse
