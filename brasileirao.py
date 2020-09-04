@@ -174,7 +174,7 @@ o dicionário de faixas).
 
 Note que esse número está nos dados recebidos no parâmetro e você deve pegar esse
 número daí. Não basta retornar o valor correto, tem que acessar os dados
-fornecidos.
+fornecidos..
 '''
 def qtos_libertadores(dados):
     pass
