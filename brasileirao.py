@@ -77,22 +77,23 @@ def ids_dos_times_de_um_jogo(dados, id_jogo):
     return time1, time2 # Assim, retornamos as duas respostas em um único return.
 '''
 def ids_dos_times_de_um_jogo(dados, id_jogo):
-    time1 = 12
-    time2 = 13
-    return time1, time2 # Assim, retornamos as duas respostas em um único return.
+   # time1 = 12
+   #time2 = 13
+   # return time1, time2 # Assim, retornamos as duas respostas em um único return.
+   pass
 
 '''
 4. A próxima função recebe a id_numerica de um time e deve retornar o seu 'nome-comum'.
 '''
 def nome_do_time(dados, id_time):
-   pass
+    pass
 
 '''
 5. A próxima função "cruza" as duas anteriores. Recebe uma id de um jogo
 e retorna os "nome-comum" dos dois times.
 '''
 def nomes_dos_times_de_um_jogo(dados, id_jogo):
-   pass
+    pass
 
 '''
 6. Façamos agora a busca "ao contrário". Conhecendo
@@ -163,9 +164,42 @@ Ou seja, as chaves são ids de estádios e os valores associados,
 o número de vezes que um jogo ocorreu no estádio.
 '''
 def dicionario_id_estadio_e_nro_jogos(dados):
-    pass
+    ocorreu = {}
+    lista_id_jogos = []
+    #cont_numero_jogos = len(dados['fases']['2700']['jogos']['id'])
+    lista_estadio = []
+
+    # forma lista de id de jogos
+    for i in dados['fases']['2700']['jogos']['id']:
+        lista_id_jogos.append(i)
+
+    #percorre lista de id de jogos focado no atributo 'estadio_id'
+    for x in range(len(dados['fases']['2700']['jogos']['id'])):
+        estadio_id = dados['fases']['2700']['jogos']['id'][lista_id_jogos[x]]['estadio_id']
+        
+        if estadio_id in ocorreu:    
+            ocorreu[estadio_id]+=1     
+        else:
+            ocorreu[estadio_id]=1
+
+    return ocorreu  
+    '''
+    print("####")
+    for x in ocorreu:
+        print(ocorreu, "\n")'''
+
+    
+'''
+def data_de_um_jogo(dados, id_jogo):
+    for x in dados['fases']['2700']['jogos']['id']:
+        if id_jogo == x:
+            return dados['fases']['2700']['jogos']['id'][id_jogo]['data']
+    return 'não encontrado'''
+
 
 '''
+
+
 13. A próxima função recebe apenas o dicionário dos dados do brasileirão
 
 Ela retorna o número de times que o brasileirão qualifica para a libertadores.
@@ -221,3 +255,5 @@ Se a id nao for válida, ela retorna a string 'não encontrado'.
 '''
 def classificacao_do_time_por_id(dados, time_id):
     pass
+
+#dicionario_id_estadio_e_nro_jogos(pega_dados())
