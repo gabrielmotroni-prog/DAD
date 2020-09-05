@@ -166,7 +166,6 @@ o número de vezes que um jogo ocorreu no estádio..
 def dicionario_id_estadio_e_nro_jogos(dados):
     ocorreu = {}
     lista_id_jogos = []
-    #cont_numero_jogos = len(dados['fases']['2700']['jogos']['id'])
     lista_estadio = []
 
     # forma lista de id de jogos
@@ -183,18 +182,10 @@ def dicionario_id_estadio_e_nro_jogos(dados):
             ocorreu[estadio_id]=1
 
     return ocorreu  
-    '''
-    print("####")
-    for x in ocorreu:
-        print(ocorreu, "\n")'''
+  
 
     
-'''
-def data_de_um_jogo(dados, id_jogo):
-    for x in dados['fases']['2700']['jogos']['id']:
-        if id_jogo == x:
-            return dados['fases']['2700']['jogos']['id'][id_jogo]['data']
-    return 'não encontrado'''
+
 
 
 '''
@@ -225,7 +216,7 @@ def ids_dos_melhor_classificados(dados, numero):
     #percorre a categoria 'unico' de acordo com o numero passado 
     for i in range(numero):
         lista_numeros.append(dados['fases']['2700']['classificacao']['grupo']['Único'][i])
-        #print(lista_numeros[i])
+
     return lista_numeros
 
 '''
@@ -253,6 +244,7 @@ ela chumbada da função.
 '''
 def rebaixados(dados):
     pass
+
 
 '''
 17. A próxima função recebe (além do dicionario de dados do brasileirão) uma id de time.
